@@ -33,7 +33,7 @@ function myMenuFunction(){
 
 /* ----- TYPING EFFECT ----- */
  let typingEffect = new Typed(".typedText",{
-    strings : ["Developer"],
+    strings : ["Java Developer", "AWS Cloud Enthusiast", "Frontend Designer"],
     loop : true,
     typeSpeed : 100, 
     backSpeed : 80,
@@ -61,6 +61,9 @@ sr.reveal('.featured-image',{delay: 300})
 /* -- PROJECT BOX -- */
 sr.reveal('.project-box',{interval: 200})
 
+/* -- CERTIFICATIONS -- */
+sr.reveal('.cert-box',{interval: 200})
+
 /* -- HEADINGS -- */
 sr.reveal('.top-header',{})
 
@@ -75,6 +78,7 @@ const srLeft = ScrollReveal({
 })
 
 srLeft.reveal('.about-info',{delay: 100})
+srLeft.reveal('.experience-info',{delay: 100})
 srLeft.reveal('.contact-info',{delay: 100})
 
 /* -- ABOUT SKILLS & FORM BOX -- */
@@ -86,6 +90,7 @@ const srRight = ScrollReveal({
 })
 
 srRight.reveal('.skills-box',{delay: 100})
+srRight.reveal('.exp-details-box',{delay: 100})
 srRight.reveal('.form-control',{delay: 100})
 
 

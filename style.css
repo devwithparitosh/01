@@ -238,12 +238,20 @@ nav{
     margin: auto 0;
     width: 380px;
     height: 380px;
+    border-radius: 55% 45% 30% 70% / 60% 30% 70% 40%;
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--first-color), var(--text-color-third));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid var(--color-white);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.1);
     animation: imgFloat 7s ease-in-out infinite;
 }
 .image img{
-    width: 380px;
-    height: 380px;
-    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 @keyframes imgFloat {
     50%{
@@ -354,6 +362,65 @@ h3{
     color: var(--color-white);
     padding: 2px 10px;
     border-radius: 5px;
+}
+
+/* ----- CERTIFICATIONS BOX ----- */
+.cert-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    width: 100%;
+}
+.cert-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--color-white);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    transition: .3s;
+}
+.cert-box:hover{
+    transform: translateY(-10px);
+}
+
+/* ----- EXPERIENCE BOX ----- */
+.experience-info{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-block: 30px 70px;
+    padding-inline: 20px;
+    width: 100%;
+    background: var(--color-white);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    border-radius: 20px;
+}
+.experience-info h3{
+    margin-bottom: 20px;
+}
+.experience-info p{
+    text-align: center;
+    font-size: 15px;
+    color: #777;
+}
+.exp-details-box{
+    margin: 10px;
+    width: 100%;
+}
+.exp-list ul{
+    padding-left: 20px;
+}
+.exp-list ul li{
+    margin-bottom: 15px;
+    font-size: 15px;
+    color: #555;
+    list-style: disc;
 }
 
 /* ----- PROJECTS BOX ----- */
