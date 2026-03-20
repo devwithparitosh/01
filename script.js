@@ -33,7 +33,7 @@ function myMenuFunction(){
 
 /* ----- TYPING EFFECT ----- */
  let typingEffect = new Typed(".typedText",{
-    strings : ["Java Developer", "AWS Cloud Enthusiast", "Frontend Designer"],
+    strings : ["Tech Enthusiast", "AWS Cloud Enthusiast", "Java Developer"],
     loop : true,
     typeSpeed : 100, 
     backSpeed : 80,
@@ -120,3 +120,25 @@ function scrollActive() {
 }
 
 window.addEventListener('scroll', scrollActive)
+
+
+/* ----- DARK MODE ----- */
+const body = document.querySelector('body'),
+    toggleSwitch = document.getElementById('toggle-switch');
+
+toggleSwitch.addEventListener('click', () => {
+  body.classList.toggle('dark');
+});
+
+// Check for saved theme in localStorage
+if (localStorage.getItem('theme') === 'dark') {
+  body.classList.add('dark');
+}
+
+toggleSwitch.addEventListener('click', () => {
+  if (body.classList.contains('dark')) {
+    localStorage.setItem('theme', 'dark');
+  } else {
+    localStorage.setItem('theme', 'light');
+  }
+});

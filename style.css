@@ -18,12 +18,22 @@
 
 }
 
+/* ----- DARK MODE VARIABLES ----- */
+body.dark {
+    --body-color: #242526;
+    --color-white: #3a3b3c;
+    --text-color-second: #e4e6eb;
+    --text-color-third: #309fab; /* same or adjusted */
+    --first-shadow-color: rgba(255, 255, 255, 0.1);
+}
+
 /* ----- BASE ----- */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    transition: background 0.3s, color 0.3s;
 }
 
 /* ----- SMOOTH SCROLL ----- */
@@ -73,9 +83,43 @@ i{
     font-size: 16px;
 }
 
+/* ----- DARK MODE TOGGLE ----- */
+.mode{
+    display: flex;
+    align-items: center;
+    margin-right: -2vw;
+}
+.moon-sun{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--color-white);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+#moon, #sun{
+    position: absolute;
+    font-size: 20px;
+    transition: .3s;
+}
+#sun{
+    opacity: 0;
+}
+body.dark #moon{
+    opacity: 0;
+}
+body.dark #sun{
+    opacity: 1;
+}
+
 /* ------- BASE -------- */
 body{
     background: var(--body-color);
+    color: var(--text-color-second);
 }
 .container{
     width: 100%;
@@ -176,7 +220,7 @@ nav{
 }
 .featured-text-card span{
     background: var(--third-color);
-    color: var(--color-white);
+    color: #fff;
     padding: 3px 8px;
     font-size: 12px;
     border-radius: 5px;
@@ -252,6 +296,7 @@ nav{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center 10%;
 }
 @keyframes imgFloat {
     50%{
@@ -566,7 +611,7 @@ footer{
     align-items: center;
     flex-direction: column;
     row-gap: 30px;
-    background: #F8F8F8;
+    background: var(--body-color);
     padding-block: 40px 60px;
 }
 .top-footer p{
